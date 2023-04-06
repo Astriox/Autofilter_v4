@@ -22,9 +22,9 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('𝗕𝗔𝗖𝗞𝗨𝗣 𝗖𝗛𝗔𝗡𝗡𝗘𝗟', url='https://t.me/MALAYALIFREAKSALL')
+            InlineKeyboardButton("𝗕𝗔𝗖𝗞𝗨𝗣 𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url="https://t.me/MALAYALIFREAKSALL")
             ],[
-            InlineKeyboardButton('ℍ𝔼𝕃ℙ', url=f"https://t.me/{temp.U_NAME}?start=help")
+            InlineKeyboardButton("ℍ𝔼𝕃ℙ", url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -38,12 +38,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton(' 𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ ', url='https://t.me/+z8iuL9kThWViNjll')
+            InlineKeyboardButton(" 𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ ", url="https://t.me/+z8iuL9kThWViNjll")
             ],[                       
-            InlineKeyboardButton(' 𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃 ', url='https://t.me/+dqquafhU0ig5YzFl')
+            InlineKeyboardButton(" 𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃 ", url="https://t.me/+dqquafhU0ig5YzFl")
             ],[ 
-            InlineKeyboardButton('🔰 𝔸𝔹𝕆𝕌𝕋 🔰', callback_data='about'), 
-            InlineKeyboardButton('ℍ𝔼𝕃ℙ', callback_data='help')
+            InlineKeyboardButton("🔰 𝔸𝔹𝕆𝕌𝕋 🔰", callback_data='about'), 
+            InlineKeyboardButton("ℍ𝔼𝕃ℙ", callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -87,12 +87,12 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton(' 𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ ', url='https://t.me/+z8iuL9kThWViNjll')
+            InlineKeyboardButton(" 𝕄𝕆𝕍𝕀𝔼 ℝ𝔼ℚ𝕌𝔼𝕊𝕋 𝔾ℝ𝕆𝕌ℙ ", url="https://t.me/+z8iuL9kThWViNjll")
             ],[                       
-            InlineKeyboardButton(' 𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃 ', url='https://t.me/+dqquafhU0ig5YzFl')
+            InlineKeyboardButton(" 𝕌ℙ𝔻𝔸𝕋𝔼𝕊 ℂℍ𝔸ℕℕ𝔼𝕃 ", url="https://t.me/+dqquafhU0ig5YzFl")
             ],[ 
-            InlineKeyboardButton('🔰 𝔸𝔹𝕆𝕌𝕋 🔰', callback_data='about'), 
-            InlineKeyboardButton('ℍ𝔼𝕃ℙ', callback_data='help')
+            InlineKeyboardButton("🔰 𝔸𝔹𝕆𝕌𝕋 🔰", callback_data='about'), 
+            InlineKeyboardButton("ℍ𝔼𝕃ℙ", callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
